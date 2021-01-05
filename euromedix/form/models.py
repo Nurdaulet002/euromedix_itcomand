@@ -1,8 +1,7 @@
 import json
 from django.db import models
 from django.conf import settings
-from django.db.models import Count
-from django.contrib.postgres.fields import JSONField
+from django.db.models import JSONField, Count
 from django.core.exceptions import ObjectDoesNotExist
 from sur.models import Hospital, FuncStructure
 from rpn.models import Patient
