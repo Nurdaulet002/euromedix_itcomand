@@ -1,0 +1,18 @@
+{% if form.errors %}
+	<p>Ваше имя пользователя и пароль не совпадают. <br> Пожалуйста, попробуйте еще раз.</p>
+{% endif %}
+<form method="post" action="">
+	{% csrf_token %}
+	<table>
+		<tr>
+		    <td>Введите логин</td>
+		    <td>{{ form.username }}</td>
+		</tr>
+		<tr>
+		    <td>Введите пароль</td>
+		    <td>{{ form.password }}</td>
+		</tr>
+	</table>
+<input type="submit" value="Подтвердить">
+<input type="hidden" name="next" value="{{ next }}">
+</form>
